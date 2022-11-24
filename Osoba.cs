@@ -18,12 +18,65 @@ namespace EsDnevnik2022A
         {
             InitializeComponent();
         }
-
+        private void TxtPopulate()
+        {
+            tbId.Text = tabela.Rows[broj_sloga][0].ToString();
+            tbIme.Text = tabela.Rows[broj_sloga][1].ToString();
+            tbPrezime.Text = tabela.Rows[broj_sloga][2].ToString();
+            tbAdresa.Text = tabela.Rows[broj_sloga][3].ToString();
+            if (broj_sloga == tabela.Rows.Count - 1)
+            {
+                btNext.Enabled = false;
+                btLast.Enabled = false;
+            }
+            else
+            {
+                btNext.Enabled = true;
+                btLast.Enabled = true;
+            }
+            if (broj_sloga == 0)
+            {
+                btPrev.Enabled = false;
+                btFirst.Enabled = false;
+            }
+            else
+            {
+                btPrev.Enabled = true;
+                btFirst.Enabled = true;
+            }
+        }
         private void Osoba_Load(object sender, EventArgs e)
         {
             tabela = new DataTable();
             // ovo izbacujemo uskoro...
             SqlConnection veza = new SqlConnection("Data Source=INF_4_PROFESOR\\SQLPBG;Initial Catalog=ednevnik2022;Integrated Security=true");
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM osoba", veza);
+            da.Fill(tabela);
+            TxtPopulate();
+        }
+
+        private void btNext_Click(object sender, EventArgs e)
+        {
+            broj_sloga++;
+            TxtPopulate();
+        }
+
+        private void btFirst_Click(object sender, EventArgs e)
+        {
+            broj_sloga = 0;
+            TxtPopulate();
+        }
+
+        private void btPrev_Click(object sender, EventArgs e)
+        {
+            broj_sloga--;
+            TxtPopulate();
+        }
+
+        private void btLast_Click(object sender, EventArgs e)
+        {
+            broj_sloga = tabela.Rows.Count - 1;
+            TxtPopulate();
         }
     }
 }
