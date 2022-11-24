@@ -20,29 +20,40 @@ namespace EsDnevnik2022A
         }
         private void TxtPopulate()
         {
-            tbId.Text = tabela.Rows[broj_sloga][0].ToString();
-            tbIme.Text = tabela.Rows[broj_sloga][1].ToString();
-            tbPrezime.Text = tabela.Rows[broj_sloga][2].ToString();
-            tbAdresa.Text = tabela.Rows[broj_sloga][3].ToString();
-            if (broj_sloga == tabela.Rows.Count - 1)
+            if (tabela.Rows.Count == 0)
             {
-                btNext.Enabled = false;
-                btLast.Enabled = false;
+                tbId.Text = "";
+                tbIme.Text = "";
+                tbPrezime.Text = "";
+                tbAdresa.Text = "";
             }
             else
             {
-                btNext.Enabled = true;
-                btLast.Enabled = true;
-            }
-            if (broj_sloga == 0)
-            {
-                btPrev.Enabled = false;
-                btFirst.Enabled = false;
-            }
-            else
-            {
-                btPrev.Enabled = true;
-                btFirst.Enabled = true;
+                tbId.Text = tabela.Rows[broj_sloga][0].ToString();
+                tbIme.Text = tabela.Rows[broj_sloga][1].ToString();
+                tbPrezime.Text = tabela.Rows[broj_sloga][2].ToString();
+                tbAdresa.Text = tabela.Rows[broj_sloga][3].ToString();
+                if (broj_sloga == tabela.Rows.Count - 1)
+                {
+                    btNext.Enabled = false;
+                    btLast.Enabled = false;
+                }
+                else
+                {
+                    btNext.Enabled = true;
+                    btLast.Enabled = true;
+                }
+                if (broj_sloga == 0)
+                {
+                    btPrev.Enabled = false;
+                    btFirst.Enabled = false;
+                }
+                else
+                {
+                    btPrev.Enabled = true;
+                    btFirst.Enabled = true;
+                }
+
             }
         }
         private void Osoba_Load(object sender, EventArgs e)
@@ -77,6 +88,23 @@ namespace EsDnevnik2022A
         {
             broj_sloga = tabela.Rows.Count - 1;
             TxtPopulate();
+        }
+
+        private void btUpd_Click(object sender, EventArgs e)
+        {
+            string naredba = "UPDATE osoba SET ";
+            naredba = naredba + "ime = '" + tbIme.Text + "', ";
+            naredba = naredba + "prezime='" + tbPrezime.Text + "', ";
+            naredba = naredba + "adresa='" + tbAdresa.Text + "' ";
+            naredba = naredba + "WHERE id=" + tbId.Text;
+            // textBox1.Text = naredba;
+            SqlConnection veza = new SqlConnection("Data Source=INF_4_PROFESOR\\SQLPBG;Initial Catalog=ednevnik2022;Integrated Security=true");
+            SqlCommand komanda = new SqlCommand(naredba, veza);
+            veza.Open();
+            komanda.ExecuteNonQuery();
+            veza.Close();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM osoba", veza);
+            da.Fill(tabela);
         }
     }
 }

@@ -43,6 +43,8 @@ namespace EsDnevnik2022A
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btUpd = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // tbId
@@ -89,14 +91,14 @@ namespace EsDnevnik2022A
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(173, 280);
+            this.textBox7.Location = new System.Drawing.Point(173, 270);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 20);
             this.textBox7.TabIndex = 6;
             // 
             // btFirst
             // 
-            this.btFirst.Location = new System.Drawing.Point(44, 333);
+            this.btFirst.Location = new System.Drawing.Point(36, 370);
             this.btFirst.Name = "btFirst";
             this.btFirst.Size = new System.Drawing.Size(75, 23);
             this.btFirst.TabIndex = 7;
@@ -106,7 +108,7 @@ namespace EsDnevnik2022A
             // 
             // btPrev
             // 
-            this.btPrev.Location = new System.Drawing.Point(125, 333);
+            this.btPrev.Location = new System.Drawing.Point(127, 370);
             this.btPrev.Name = "btPrev";
             this.btPrev.Size = new System.Drawing.Size(75, 23);
             this.btPrev.TabIndex = 8;
@@ -116,7 +118,7 @@ namespace EsDnevnik2022A
             // 
             // btNext
             // 
-            this.btNext.Location = new System.Drawing.Point(347, 333);
+            this.btNext.Location = new System.Drawing.Point(339, 370);
             this.btNext.Name = "btNext";
             this.btNext.Size = new System.Drawing.Size(75, 23);
             this.btNext.TabIndex = 9;
@@ -126,7 +128,7 @@ namespace EsDnevnik2022A
             // 
             // btLast
             // 
-            this.btLast.Location = new System.Drawing.Point(428, 333);
+            this.btLast.Location = new System.Drawing.Point(434, 370);
             this.btLast.Name = "btLast";
             this.btLast.Size = new System.Drawing.Size(75, 23);
             this.btLast.TabIndex = 10;
@@ -161,11 +163,30 @@ namespace EsDnevnik2022A
             this.label3.TabIndex = 13;
             this.label3.Text = "Prezime";
             // 
+            // btUpd
+            // 
+            this.btUpd.Location = new System.Drawing.Point(229, 329);
+            this.btUpd.Name = "btUpd";
+            this.btUpd.Size = new System.Drawing.Size(75, 23);
+            this.btUpd.TabIndex = 14;
+            this.btUpd.Text = "Izmeni";
+            this.btUpd.UseVisualStyleBackColor = true;
+            this.btUpd.Click += new System.EventHandler(this.btUpd_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(12, 296);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(464, 20);
+            this.textBox1.TabIndex = 15;
+            // 
             // Osoba
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(645, 450);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btUpd);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -204,6 +225,8 @@ namespace EsDnevnik2022A
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btUpd;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
