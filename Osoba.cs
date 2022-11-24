@@ -100,11 +100,17 @@ namespace EsDnevnik2022A
             // textBox1.Text = naredba;
             SqlConnection veza = new SqlConnection("Data Source=INF_4_PROFESOR\\SQLPBG;Initial Catalog=ednevnik2022;Integrated Security=true");
             SqlCommand komanda = new SqlCommand(naredba, veza);
-            veza.Open();
-            komanda.ExecuteNonQuery();
-            veza.Close();
+            try
+            {
+                veza.Open();
+                komanda.ExecuteNonQuery();
+                veza.Close();
+            }
+            catch(Exception graska) { MessageBox.Show(graska.GetType().ToString()); }
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM osoba", veza);
+            tabela = new DataTable(); // MORA!!!
             da.Fill(tabela);
+            TxtPopulate();
         }
     }
 }
