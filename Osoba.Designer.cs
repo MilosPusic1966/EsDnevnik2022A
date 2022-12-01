@@ -45,10 +45,14 @@ namespace EsDnevnik2022A
             this.label3 = new System.Windows.Forms.Label();
             this.btUpd = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnIns = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbId
             // 
+            this.tbId.Enabled = false;
             this.tbId.Location = new System.Drawing.Point(173, 34);
             this.tbId.Name = "tbId";
             this.tbId.Size = new System.Drawing.Size(100, 20);
@@ -180,11 +184,43 @@ namespace EsDnevnik2022A
             this.textBox1.Size = new System.Drawing.Size(464, 20);
             this.textBox1.TabIndex = 15;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(326, 235);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "label4";
+            // 
+            // btnDel
+            // 
+            this.btnDel.Location = new System.Drawing.Point(339, 329);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(75, 23);
+            this.btnDel.TabIndex = 17;
+            this.btnDel.Text = "Brisi";
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
+            // btnIns
+            // 
+            this.btnIns.Location = new System.Drawing.Point(127, 329);
+            this.btnIns.Name = "btnIns";
+            this.btnIns.Size = new System.Drawing.Size(75, 23);
+            this.btnIns.TabIndex = 18;
+            this.btnIns.Text = "Dodaj";
+            this.btnIns.UseVisualStyleBackColor = true;
+            this.btnIns.Click += new System.EventHandler(this.btnIns_Click);
+            // 
             // Osoba
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(645, 450);
+            this.Controls.Add(this.btnIns);
+            this.Controls.Add(this.btnDel);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btUpd);
             this.Controls.Add(this.label3);
@@ -227,6 +263,9 @@ namespace EsDnevnik2022A
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btUpd;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.Button btnIns;
     }
 }
 

@@ -60,7 +60,7 @@ namespace EsDnevnik2022A
         {
             tabela = new DataTable();
             // ovo izbacujemo uskoro...
-            SqlConnection veza = new SqlConnection("Data Source=INF_4_PROFESOR\\SQLPBG;Initial Catalog=ednevnik2022;Integrated Security=true");
+            SqlConnection veza = konekcija.connect();
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM osoba", veza);
             da.Fill(tabela);
             TxtPopulate();
@@ -98,7 +98,7 @@ namespace EsDnevnik2022A
             naredba = naredba + "adresa='" + tbAdresa.Text + "' ";
             naredba = naredba + "WHERE id=" + tbId.Text;
             // textBox1.Text = naredba;
-            SqlConnection veza = new SqlConnection("Data Source=INF_4_PROFESOR\\SQLPBG;Initial Catalog=ednevnik2022;Integrated Security=true");
+            SqlConnection veza = konekcija.connect();
             SqlCommand komanda = new SqlCommand(naredba, veza);
             try
             {
@@ -111,6 +111,50 @@ namespace EsDnevnik2022A
             tabela = new DataTable(); // MORA!!!
             da.Fill(tabela);
             TxtPopulate();
+            label4.Text = "Podatak uspesno izmenjen";
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            string naredba = "DELETE FROM osoba WHERE id=" + tbId.Text;
+            SqlConnection veza = konekcija.connect();
+            SqlCommand komanda = new SqlCommand(naredba, veza);
+            if (broj_sloga == tabela.Rows.Count - 1) broj_sloga--;
+            if (broj_sloga < 0) broj_sloga = 0;
+            veza.Open();
+            komanda.ExecuteNonQuery();
+            veza.Close();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM osoba", veza);
+            tabela = new DataTable(); // MORA!!!
+            da.Fill(tabela);
+            TxtPopulate();
+            label4.Text = "Podatak uspesno izmenjen";
+        }
+
+        private void btnIns_Click(object sender, EventArgs e)
+        {
+            string naredba = "INSERT INTO osoba VALUES( ";
+            // DODATI NAVODNIKE!!!
+            naredba = naredba + tbIme.Text + ",";
+            naredba = naredba + tbPrezime.Text + ",";
+            naredba = naredba + tbAdresa.Text + ",";
+            naredba = naredba + "NULL, NULL, NULL, 0)";
+            textBox1.Text = naredba;
+            // textBox1.Text = naredba;
+            SqlConnection veza = konekcija.connect();
+            SqlCommand komanda = new SqlCommand(naredba, veza);
+            try
+            {
+                veza.Open();
+                komanda.ExecuteNonQuery();
+                veza.Close();
+            }
+            catch (Exception graska) { MessageBox.Show(graska.GetType().ToString()); }
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM osoba", veza);
+            tabela = new DataTable(); // MORA!!!
+            da.Fill(tabela);
+            TxtPopulate();
+            label4.Text = "Podatak uspesno dodat";
         }
     }
 }
