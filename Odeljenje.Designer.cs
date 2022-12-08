@@ -69,6 +69,7 @@ namespace EsDnevnik2022A
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 3;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -97,7 +98,7 @@ namespace EsDnevnik2022A
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(22, 354);
+            this.button1.Location = new System.Drawing.Point(82, 354);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
@@ -106,7 +107,7 @@ namespace EsDnevnik2022A
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(228, 354);
+            this.button2.Location = new System.Drawing.Point(214, 354);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 8;
