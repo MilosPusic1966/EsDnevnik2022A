@@ -133,11 +133,11 @@ namespace EsDnevnik2022A
 
         private void btnIns_Click(object sender, EventArgs e)
         {
-            string naredba = "INSERT INTO osoba VALUES( ";
+            string naredba = "INSERT INTO osoba VALUES('";
             // DODATI NAVODNIKE!!!
-            naredba = naredba + tbIme.Text + ",";
-            naredba = naredba + tbPrezime.Text + ",";
-            naredba = naredba + tbAdresa.Text + ",";
+            naredba = naredba + tbIme.Text + "','";
+            naredba = naredba + tbPrezime.Text + "','";
+            naredba = naredba + tbAdresa.Text + "',";
             naredba = naredba + "NULL, NULL, NULL, 0)";
             textBox1.Text = naredba;
             // textBox1.Text = naredba;
