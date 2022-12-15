@@ -27,5 +27,10 @@ namespace EsDnevnik2022A
             Odeljenje nova = new Odeljenje();
             nova.Show();
         }
+
+        private void probaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
