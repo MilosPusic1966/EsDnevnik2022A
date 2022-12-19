@@ -14,6 +14,7 @@ namespace EsDnevnik2022A
         public Glavna()
         {
             InitializeComponent();
+            // ovde ide dodatak
         }
 
         private void osobaToolStripMenuItem_Click(object sender, EventArgs e)
