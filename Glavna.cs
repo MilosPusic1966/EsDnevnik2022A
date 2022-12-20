@@ -33,5 +33,17 @@ namespace EsDnevnik2022A
         {
 
         }
+
+        private void aaaaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sifarnik nova = new sifarnik("smer");
+            nova.Show();
+        }
+
+        private void skolskaGodinaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sifarnik nova = new sifarnik("skolska_godina");
+            nova.Show();
+        }
     }
 }

@@ -34,17 +34,17 @@ namespace EsDnevnik2022A
             this.osobaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.odeljenjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.skolskaGodinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aaaaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bbbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.podaciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raspodelaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oceneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izvestajiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prosekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aaaaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bbbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.josNestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.probaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.primerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,6 +92,20 @@ namespace EsDnevnik2022A
             this.skolskaGodinaToolStripMenuItem.Name = "skolskaGodinaToolStripMenuItem";
             this.skolskaGodinaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.skolskaGodinaToolStripMenuItem.Text = "Skolska godina";
+            this.skolskaGodinaToolStripMenuItem.Click += new System.EventHandler(this.skolskaGodinaToolStripMenuItem_Click);
+            // 
+            // aaaaToolStripMenuItem
+            // 
+            this.aaaaToolStripMenuItem.Name = "aaaaToolStripMenuItem";
+            this.aaaaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aaaaToolStripMenuItem.Text = "Smer";
+            this.aaaaToolStripMenuItem.Click += new System.EventHandler(this.aaaaToolStripMenuItem_Click);
+            // 
+            // bbbToolStripMenuItem
+            // 
+            this.bbbToolStripMenuItem.Name = "bbbToolStripMenuItem";
+            this.bbbToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bbbToolStripMenuItem.Text = "bbb";
             // 
             // podaciToolStripMenuItem
             // 
@@ -105,13 +119,13 @@ namespace EsDnevnik2022A
             // raspodelaToolStripMenuItem
             // 
             this.raspodelaToolStripMenuItem.Name = "raspodelaToolStripMenuItem";
-            this.raspodelaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.raspodelaToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.raspodelaToolStripMenuItem.Text = "Raspodela";
             // 
             // oceneToolStripMenuItem
             // 
             this.oceneToolStripMenuItem.Name = "oceneToolStripMenuItem";
-            this.oceneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.oceneToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.oceneToolStripMenuItem.Text = "Ocene";
             // 
             // izvestajiToolStripMenuItem
@@ -125,28 +139,8 @@ namespace EsDnevnik2022A
             // prosekToolStripMenuItem
             // 
             this.prosekToolStripMenuItem.Name = "prosekToolStripMenuItem";
-            this.prosekToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prosekToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.prosekToolStripMenuItem.Text = "Prosek";
-            // 
-            // aaaaToolStripMenuItem
-            // 
-            this.aaaaToolStripMenuItem.Name = "aaaaToolStripMenuItem";
-            this.aaaaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.aaaaToolStripMenuItem.Text = "aaaa";
-            // 
-            // bbbToolStripMenuItem
-            // 
-            this.bbbToolStripMenuItem.Name = "bbbToolStripMenuItem";
-            this.bbbToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.bbbToolStripMenuItem.Text = "bbb";
-            // 
-            // menuStrip2
-            // 
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip2.TabIndex = 1;
-            this.menuStrip2.Text = "menuStrip2";
             // 
             // josNestoToolStripMenuItem
             // 
@@ -160,15 +154,23 @@ namespace EsDnevnik2022A
             // probaToolStripMenuItem
             // 
             this.probaToolStripMenuItem.Name = "probaToolStripMenuItem";
-            this.probaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.probaToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.probaToolStripMenuItem.Text = "proba";
             this.probaToolStripMenuItem.Click += new System.EventHandler(this.probaToolStripMenuItem_Click);
             // 
             // primerToolStripMenuItem
             // 
             this.primerToolStripMenuItem.Name = "primerToolStripMenuItem";
-            this.primerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.primerToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.primerToolStripMenuItem.Text = "primer";
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip2.TabIndex = 1;
+            this.menuStrip2.Text = "menuStrip2";
             // 
             // Glavna
             // 
