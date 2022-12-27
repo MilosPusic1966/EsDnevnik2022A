@@ -15,7 +15,7 @@ namespace EsDnevnik2022A
         DataTable dtPodaci;
         SqlDataAdapter adapter;
         string odakle;
-        
+
         public sifarnik(string naziv_tabele)
         {
             odakle = naziv_tabele;
@@ -23,7 +23,7 @@ namespace EsDnevnik2022A
         }
         private void sifarnik_Load(object sender, EventArgs e)
         {
-            adapter = new SqlDataAdapter("SELECT * FROM "+odakle, konekcija.connect());
+            adapter = new SqlDataAdapter("SELECT * FROM " + odakle, konekcija.connect());
             dtPodaci = new DataTable();
             adapter.Fill(dtPodaci);
             dataGridView1.DataSource = dtPodaci;
@@ -43,7 +43,8 @@ namespace EsDnevnik2022A
             adapter.UpdateCommand = new SqlCommandBuilder(adapter).GetUpdateCommand();
             if (menjano != null)
             {
-                 
+
+            }
         }
     }
 }

@@ -15,6 +15,7 @@ namespace EsDnevnik2022A
         {
             InitializeComponent();
             // ovde ide dodatak
+
         }
 
         private void osobaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -44,6 +45,11 @@ namespace EsDnevnik2022A
         {
             sifarnik nova = new sifarnik("skolska_godina");
             nova.Show();
+        }
+
+        private void Glavna_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
