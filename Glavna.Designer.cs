@@ -76,35 +76,35 @@ namespace EsDnevnik2022A
             // osobaToolStripMenuItem
             // 
             this.osobaToolStripMenuItem.Name = "osobaToolStripMenuItem";
-            this.osobaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.osobaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.osobaToolStripMenuItem.Text = "Osoba";
             this.osobaToolStripMenuItem.Click += new System.EventHandler(this.osobaToolStripMenuItem_Click);
             // 
             // odeljenjeToolStripMenuItem
             // 
             this.odeljenjeToolStripMenuItem.Name = "odeljenjeToolStripMenuItem";
-            this.odeljenjeToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.odeljenjeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.odeljenjeToolStripMenuItem.Text = "Odeljenje";
             this.odeljenjeToolStripMenuItem.Click += new System.EventHandler(this.odeljenjeToolStripMenuItem_Click);
             // 
             // skolskaGodinaToolStripMenuItem
             // 
             this.skolskaGodinaToolStripMenuItem.Name = "skolskaGodinaToolStripMenuItem";
-            this.skolskaGodinaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.skolskaGodinaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.skolskaGodinaToolStripMenuItem.Text = "Skolska godina";
             this.skolskaGodinaToolStripMenuItem.Click += new System.EventHandler(this.skolskaGodinaToolStripMenuItem_Click);
             // 
             // aaaaToolStripMenuItem
             // 
             this.aaaaToolStripMenuItem.Name = "aaaaToolStripMenuItem";
-            this.aaaaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.aaaaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aaaaToolStripMenuItem.Text = "Smer";
             this.aaaaToolStripMenuItem.Click += new System.EventHandler(this.aaaaToolStripMenuItem_Click);
             // 
             // bbbToolStripMenuItem
             // 
             this.bbbToolStripMenuItem.Name = "bbbToolStripMenuItem";
-            this.bbbToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.bbbToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bbbToolStripMenuItem.Text = "bbb";
             // 
             // podaciToolStripMenuItem
@@ -119,14 +119,15 @@ namespace EsDnevnik2022A
             // raspodelaToolStripMenuItem
             // 
             this.raspodelaToolStripMenuItem.Name = "raspodelaToolStripMenuItem";
-            this.raspodelaToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.raspodelaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.raspodelaToolStripMenuItem.Text = "Raspodela";
             // 
             // oceneToolStripMenuItem
             // 
             this.oceneToolStripMenuItem.Name = "oceneToolStripMenuItem";
-            this.oceneToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.oceneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.oceneToolStripMenuItem.Text = "Ocene";
+            this.oceneToolStripMenuItem.Click += new System.EventHandler(this.oceneToolStripMenuItem_Click);
             // 
             // izvestajiToolStripMenuItem
             // 

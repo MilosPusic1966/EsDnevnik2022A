@@ -51,5 +51,11 @@ namespace EsDnevnik2022A
         {
             Application.Exit();
         }
+
+        private void oceneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ocena2 nova = new Ocena2();
+            nova.Show();
+        }
     }
 }
