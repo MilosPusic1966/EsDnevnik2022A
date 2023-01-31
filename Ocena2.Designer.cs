@@ -100,6 +100,7 @@ namespace EsDnevnik2022A
             this.button2.TabIndex = 7;
             this.button2.Text = "dodaj";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -109,6 +110,7 @@ namespace EsDnevnik2022A
             this.button3.TabIndex = 8;
             this.button3.Text = "promeni";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -118,6 +120,7 @@ namespace EsDnevnik2022A
             this.button4.TabIndex = 9;
             this.button4.Text = "brisi";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // dataGridView1
             // 
@@ -126,6 +129,7 @@ namespace EsDnevnik2022A
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(570, 327);
             this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.CurrentCellChanged += new System.EventHandler(this.dataGridView1_CurrentCellChanged);
             // 
             // Ocena2
             // 
